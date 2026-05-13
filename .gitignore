@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.DS_Store
+.dart_tool/
+.packages
+build/
+pubspec.lock
+*.iml
+*.ipr
+*.iws
+.idea/
