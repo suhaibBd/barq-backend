@@ -1,5 +1,5 @@
 import 'package:vania/vania.dart';
-import 'package:autostrad_backend/route/api_route.dart';
+import 'package:barq_backend/route/api_route.dart';
 
 class RouteServiceProvider extends ServiceProvider {
   @override

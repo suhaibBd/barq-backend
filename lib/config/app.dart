@@ -1,5 +1,5 @@
 import 'package:vania/vania.dart';
-import 'package:autostrad_backend/app/providers/route_service_provider.dart';
+import 'package:barq_backend/app/providers/route_service_provider.dart';
 import 'auth.dart';
 import 'cors.dart';
 

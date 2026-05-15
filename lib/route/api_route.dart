@@ -1,17 +1,17 @@
 import 'package:vania/vania.dart';
-import 'package:autostrad_backend/app/http/controllers/auth/auth_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/user/user_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/driver/driver_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/wallet/wallet_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/dashboard/dashboard_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/rating/rating_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/notification/notification_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/chat/chat_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/storage/storage_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/wallet/recharge_card_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/shipment/shipment_controller.dart';
-import 'package:autostrad_backend/app/http/controllers/driver/driver_location_controller.dart';
-import 'package:autostrad_backend/app/http/middleware/authenticate.dart'
+import 'package:barq_backend/app/http/controllers/auth/auth_controller.dart';
+import 'package:barq_backend/app/http/controllers/user/user_controller.dart';
+import 'package:barq_backend/app/http/controllers/driver/driver_controller.dart';
+import 'package:barq_backend/app/http/controllers/wallet/wallet_controller.dart';
+import 'package:barq_backend/app/http/controllers/dashboard/dashboard_controller.dart';
+import 'package:barq_backend/app/http/controllers/rating/rating_controller.dart';
+import 'package:barq_backend/app/http/controllers/notification/notification_controller.dart';
+import 'package:barq_backend/app/http/controllers/chat/chat_controller.dart';
+import 'package:barq_backend/app/http/controllers/storage/storage_controller.dart';
+import 'package:barq_backend/app/http/controllers/wallet/recharge_card_controller.dart';
+import 'package:barq_backend/app/http/controllers/shipment/shipment_controller.dart';
+import 'package:barq_backend/app/http/controllers/driver/driver_location_controller.dart';
+import 'package:barq_backend/app/http/middleware/authenticate.dart'
     show AuthenticateMiddleware, AdminMiddleware;
 
 class ApiRoute implements Route {

@@ -1,4 +1,4 @@
-import 'package:autostrad_backend/app/models/user.dart';
+import 'package:barq_backend/app/models/user.dart';
 
 Map<String, dynamic> authConfig = {
   'guards': {
