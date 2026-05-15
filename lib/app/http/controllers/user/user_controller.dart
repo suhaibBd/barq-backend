@@ -144,7 +144,7 @@ class UserController extends Controller {
       'first_name': user['first_name'] ?? '',
       'last_name': user['last_name'] ?? '',
       'avatar_url': user['avatar'],
-      'role': user['role'] ?? 'restaurant',
+      'role': user['role'] ?? 'store',
       'is_driver_verified': (user['is_driver_verified'] ?? 0) == 1,
       'rating': double.tryParse(user['rating']?.toString() ?? '5.0') ?? 5.0,
       'total_trips': user['total_trips'] ?? 0,

@@ -10,7 +10,7 @@ class DashboardController extends Controller {
   Future<Response> stats(Request request) async {
     final totalUsers = await User().query().count();
     final totalDrivers = await User().query().where('role', '=', 'driver').count();
-    final totalRestaurants = await User().query().where('role', '=', 'restaurant').count();
+    final totalStores = await User().query().where('role', '=', 'store').count();
     final verifiedDrivers = await User().query().where('is_driver_verified', '=', 1).count();
     final totalOrders = await Shipment().query().count();
     final pendingOrders = await Shipment().query().where('status', '=', 'pending').count();
@@ -21,7 +21,7 @@ class DashboardController extends Controller {
     return Response.json({
       'users_count': totalUsers,
       'drivers_count': totalDrivers,
-      'restaurants_count': totalRestaurants,
+      'stores_count': totalStores,
       'verified_drivers': verifiedDrivers,
       'total_orders': totalOrders,
       'pending_orders': pendingOrders,

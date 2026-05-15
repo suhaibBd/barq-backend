@@ -1,6 +1,6 @@
 import 'package:vania/vania.dart';
 
-// PRODUCTION: Replace origin with your actual domains e.g. 'https://dashboard.sahm-app.com'
+// PRODUCTION: Replace origin with your actual domains e.g. 'https://dashboard.barq-app.com'
 CORSConfig cors = CORSConfig(
   enabled: true,
   origin: env('CORS_ORIGIN') ?? '*',
