@@ -47,6 +47,12 @@ class UserController extends Controller {
     if (body['car_number'] != null) {
       data['car_number'] = body['car_number'];
     }
+    if (body['latitude'] != null) {
+      data['latitude'] = body['latitude'];
+    }
+    if (body['longitude'] != null) {
+      data['longitude'] = body['longitude'];
+    }
 
     await User().query().where('id', '=', userId).update(data);
 
@@ -150,6 +156,8 @@ class UserController extends Controller {
       'total_trips': user['total_trips'] ?? 0,
       'is_active': (user['is_active'] ?? 1) == 1,
       'is_online': (user['is_online'] ?? 0) == 1,
+      'latitude': user['latitude'] != null ? double.tryParse(user['latitude'].toString()) : null,
+      'longitude': user['longitude'] != null ? double.tryParse(user['longitude'].toString()) : null,
       'created_at': user['created_at']?.toString() ?? DateTime.now().toIso8601String(),
     };
   }

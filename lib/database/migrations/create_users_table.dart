@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration {
       string('email', length: 100, nullable: true);
       string('password', nullable: true);
       string('avatar', nullable: true);
-      string('role', length: 20, defaultValue: 'passenger');
+      string('role', length: 20, defaultValue: 'store');
       tinyInt('is_driver_verified', defaultValue: 0);
       string('rating', length: 10, defaultValue: '5.0');
       integer('total_trips', defaultValue: 0);

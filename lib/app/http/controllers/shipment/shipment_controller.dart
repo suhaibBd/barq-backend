@@ -24,8 +24,17 @@ class ShipmentController extends Controller {
     final toCity = request.input('to_city');
     final size = request.input('size');
     final urgency = request.input('urgency') ?? 'normal';
-    final pickupLat = request.input('pickup_lat');
-    final pickupLng = request.input('pickup_lng');
+
+    // Auto-fill pickup from store's saved location if not provided
+    var pickupLat = request.input('pickup_lat');
+    var pickupLng = request.input('pickup_lng');
+    if (pickupLat == null || pickupLng == null) {
+      final sender = await User().query().where('id', '=', senderId).first();
+      if (sender != null && sender['latitude'] != null && sender['longitude'] != null) {
+        pickupLat = sender['latitude'];
+        pickupLng = sender['longitude'];
+      }
+    }
 
     final suggestedPrice = calculateSuggestedPrice(
       fromCity: fromCity,

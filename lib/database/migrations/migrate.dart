@@ -32,6 +32,7 @@ import 'create_alter_users_online_status_table.dart';
 import 'create_driver_locations_table.dart';
 import 'create_alter_shipments_assignment_table.dart';
 import 'create_shipment_rejections_table.dart';
+import 'create_alter_users_location_table.dart';
 
 void main() async {
   Env().load();
@@ -75,5 +76,6 @@ class Migrate {
     await CreateDriverLocationsTable().up();
     await CreateAlterShipmentsAssignmentTable().up();
     await CreateShipmentRejectionsTable().up();
+    await CreateAlterUsersLocationTable().up();
   }
 }
